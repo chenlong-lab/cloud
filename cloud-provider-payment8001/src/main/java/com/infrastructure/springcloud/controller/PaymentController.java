@@ -1,5 +1,6 @@
 package com.infrastructure.springcloud.controller;
 
+import com.api.common.vo.CommonResultVO;
 import com.infrastructure.springcloud.entities.Payment;
 import com.infrastructure.springcloud.service.PaymentService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("/getById/{id}")
-    public Payment getById(@PathVariable("id") Long id) {
-        return paymentService.getById(id);
+    public CommonResultVO<Payment> getById(@PathVariable("id") Long id) {
+        return new CommonResultVO<>(200, "查询成功", paymentService.getById(id));
     }
 }

@@ -57,6 +57,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.12</version>
         </dependency>
+        <dependency>
+            <groupId>com.infrastructure.cloud</groupId>
+            <artifactId>cloud-api-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 
